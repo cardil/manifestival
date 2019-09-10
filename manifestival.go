@@ -34,7 +34,7 @@ type Manifestival interface {
 	// Returns a copy of the resource from the api server, nil if not found
 	Get(spec *unstructured.Unstructured) (*unstructured.Unstructured, error)
 	// Transforms the resources within a Manifest
-	Transform(fns ...Transformer) error
+	Transform(fns ...Transformer) (*Manifest, error)
 }
 
 type Manifest struct {
